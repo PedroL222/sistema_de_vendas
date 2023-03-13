@@ -1,0 +1,45 @@
+/* Estilo geral */
+
+*{
+    margin: 0%;
+    padding: 0%;
+    border: none;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.678);
+}
+
+/* Estilo geral */
+
+/* Estilo Navbar */
+
+.divNav{
+    background-color: #F0D017;
+}
+
+.logo_nav{
+    min-width: 130px;
+    width: 10vw;    
+}
+
+.input_nav{
+    width: 30vw;
+    font-size: 1.5vw;
+}
+
+.lupa_input_nav{
+    position: relative;
+    right: 40px;
+    bottom: -8px;
+    cursor: pointer;
+}
+
+.opc_entrada{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo Navbar */
