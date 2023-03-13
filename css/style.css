@@ -21,25 +21,93 @@ a{
 }
 
 .logo_nav{
-    min-width: 130px;
+    min-width: 100px;
     width: 10vw;    
 }
 
+.nav_pesq{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Input Nav */
+
 .input_nav{
-    width: 30vw;
+    width: 100%;
     font-size: 1.5vw;
+}
+
+.lupa_nav{
+    display: flex;
+    align-items: center;
 }
 
 .lupa_input_nav{
     position: relative;
     right: 40px;
-    bottom: -8px;
     cursor: pointer;
 }
+
+/* Input Nav */
+
+/* Links de navegação */
+
+.opc_navegacao{
+    width: 50vw;
+    margin-top: 10px;
+    font-size: 1.3vw;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#select_categorias{
+    width: 8vw;
+    min-width: 80px;
+    font-size: 1.3vw;
+    background-color: #F0D017;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Links de navegação */
+
+/* Links de entrada */
 
 .opc_entrada{
     display: flex;
     flex-direction: column;
+    margin-left: 20px;
+    font-size: 1.3vw;
 }
 
+/* Links de entrada */
+
+/* Links gerais*/
+
+.link_nav:hover,.link_entrada:hover{
+    color: white;
+    background-color: #b19915ad;
+}
+
+select:hover{
+    color: white;
+}
+
+
+/* Links gerais*/
+
 /* Estilo Navbar */
+
+@media (width < 720px){
+    input{
+        font-size: 0.7rem !important;
+    }
+
+    select,a{
+        font-size: 0.7rem !important;
+    }
+}
+
