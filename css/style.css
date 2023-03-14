@@ -101,6 +101,7 @@ select:hover{
 
 /* Estilo Navbar */
 
+/* Slider */
 
 .propagandas{
     display: flex;
@@ -108,12 +109,52 @@ select:hover{
 }
 
 .img_propaganda{
+    margin-top: 40px;
     width: 50%;
-    height: 450px;
+    height: 60vh;
 }
 
+/* Slider */
+
+/* Slider promoções do mês */
+
+.section_promo_mes{
+    display: flex;
+    flex-direction: column;
+}
+
+.section_promo_mes > h1{
+    text-align: center;
+    margin: 40px 0px;
+}
+
+#carouselExampleInterval2{
+    width: 100%;
+}
+
+.scroll_promos{
+   
+    height: 260px;
+    font-size: 2vw;
+    display: flex;
+    overflow: auto;
+    justify-content: space-between;
+}
+
+.promos_mes{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card_promo{
+    margin: 0px 20px;
+}
+
+/* Slider promoções do mês */
 
 @media (width < 720px){
+
     input{
         font-size: 0.7rem !important;
     }
