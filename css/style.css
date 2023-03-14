@@ -101,6 +101,18 @@ select:hover{
 
 /* Estilo Navbar */
 
+
+.propagandas{
+    display: flex;
+    flex: 1;
+}
+
+.img_propaganda{
+    width: 50%;
+    height: 450px;
+}
+
+
 @media (width < 720px){
     input{
         font-size: 0.7rem !important;
