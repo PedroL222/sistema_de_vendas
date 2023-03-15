@@ -133,8 +133,7 @@ select:hover{
 }
 
 .scroll_promos{
-   
-    height: 260px;
+    margin: 0px 40px;
     font-size: 2vw;
     display: flex;
     overflow: auto;
@@ -151,7 +150,32 @@ select:hover{
     margin: 0px 20px;
 }
 
+.img_promo_mes{
+    width: 100%;
+    height: 100%;
+}
+
 /* Slider promoções do mês */
+
+.section_oferta_dia{
+    margin: 0px 40px;
+}
+
+.section_oferta_dia > h1{
+    text-align: center;
+    margin: 20px 0px;
+}
+
+.produtos_oferta_dia{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.img_oferta_dia{
+    width: 100%;
+    height: 60%;
+}
 
 @media (width < 720px){
 
