@@ -9,11 +9,11 @@ const produtos_oferta_dia = [...document.querySelectorAll(".produtos_oferta_dia"
 
 // Funções
 
-const criarProdutosOfertaDia = (linkImg,textImg,divOferta) =>{
+const criarProdutosOfertaDia = (linkImg,textImg,divOferta,textPreco,textDesc) =>{
 
     const cardProduto = document.createElement('div');
     cardProduto.classList.add('card');
-    cardProduto.style = "min-width: 25vw; height: 30vw;";
+    cardProduto.style = "min-width: 25vw; max-width: 25vw; min-height: 30vw; max-height: 30vw;";
 
     const imgCardProduto = document.createElement('img');
     imgCardProduto.classList.add('card-img-top');
@@ -25,11 +25,23 @@ const criarProdutosOfertaDia = (linkImg,textImg,divOferta) =>{
     const cardProdutoBody = document.createElement('div');
     cardProdutoBody.classList.add('card-body');
 
-    const pCardProduto = document.createElement('p');
-    pCardProduto.classList.add('card-text');
-    pCardProduto.innerText = textImg;
+    const CardProduto = document.createElement('p');
+    CardProduto.classList.add('card-text');
+    CardProduto.innerText = textImg;
 
-    cardProdutoBody.appendChild(pCardProduto);
+    cardProdutoBody.appendChild(CardProduto);
+
+    const precoProduto = document.createElement('span');
+    precoProduto.classList.add('card-text');
+    precoProduto.innerText = textPreco;
+
+    cardProdutoBody.appendChild(precoProduto);
+
+    const descProduto = document.createElement('p');
+    precoProduto.classList.add('card-text');
+    precoProduto.innerText = textDesc;
+
+    cardProdutoBody.appendChild(descProduto);
 
     cardProduto.appendChild(cardProdutoBody);
 
@@ -53,15 +65,21 @@ fetch(linkApiProdutos)
 
             let produtoAleatorio = produtosApi[Math.floor(Math.random() * 30)];
         
-            let linkImg = produtoAleatorio.images[Math.floor(Math.random() * 3)];
+            let linkImg = produtoAleatorio.images[Math.floor(Math.random() * produtoAleatorio.images.length)];
             let textImg = produtoAleatorio.title;
+            let textPreco = produtoAleatorio.price;
+            let textDesc = produtoAleatorio.description;
         
         
-            criarProdutosOfertaDia(linkImg,textImg,el);
+            criarProdutosOfertaDia(linkImg,textImg,el,textPreco,textDesc);
         })
         i++;
     }
     });
+
+    fetch('https://dummyjson.com/products')
+.then(res => res.json())
+.then(console.log);
 
 
 
