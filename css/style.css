@@ -195,22 +195,39 @@ select:hover{
 /* Cetegorias mais Procuradas */
 
 .divCategorias{
+    width: 100%;
     display: grid;
-    padding: 15px;
-    background-color: #333;
-    border: 1px solid red;
-    height: 25vh;
-
-    grid-template-columns: auto auto auto;
-    gap: 5px;
+    grid-template-columns: 20% 20% 20% 20% 20%;
     
 }
 
-.divCategorias > div{
-    background-color: #ccc;
-    padding: 20px;
-    border: 1px solid blue;
+.categoria{
+    width: 20vw;
+    height: 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px;
+    cursor: pointer;
 }
+
+.img_categoria{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 60%;
+}
+
+.categoria:hover{
+    border: 15px solid rgb(54, 54, 228);
+}
+
+
+
+
 
 /* Cetegorias mais Procuradas */
 
