@@ -199,6 +199,7 @@ select:hover{
     display: grid;
     grid-template-columns: 20% 20% 20% 20% 20%;
     
+    
 }
 
 .categoria{
@@ -222,14 +223,46 @@ select:hover{
 }
 
 .categoria:hover{
-    border: 15px solid rgb(54, 54, 228);
+    border: 8px solid rgb(54, 54, 228);
 }
 
-
-
-
-
 /* Cetegorias mais Procuradas */
+
+/* Redes Sociais */
+
+.card_rede_social{
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#rede_face:hover{
+    background-color: #3A559F;
+    color: white;
+}
+
+#rede_insta:hover{
+    background-image: linear-gradient(to bottom, #5856CB,#B33593,#F36D36,#FECC67);
+    color: white;
+}
+
+#rede_git:hover{
+    background-color: #9354AD;
+    color: white;
+}
+
+#rede_gmail:hover{
+    background-color: #E54033;
+    color: white;
+}
+
+#rede_linkedin:hover{
+    background-color: #0074B1;
+    color: white;
+}
+
+/* Redes Sociais */
 
 @media (width < 720px){
 
