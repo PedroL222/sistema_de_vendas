@@ -92,7 +92,7 @@ a{
     background-color: #b19915ad;
 }
 
-select:hover{
+select > option:hover{
     color: white;
 }
 
@@ -263,6 +263,14 @@ select:hover{
 }
 
 /* Redes Sociais */
+
+/* Footer */
+
+footer{
+    margin-top: 40px;
+}
+
+/* Footer */
 
 @media (width < 720px){
 

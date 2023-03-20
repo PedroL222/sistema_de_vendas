@@ -1,17 +1,5 @@
-export default linkApiProdutos;
 
-const linkApiProdutos = "https://dummyjson.com/products";
-
-
-// Pegar objetos do DOM
-
-const produtos_oferta_dia = [...document.querySelectorAll(".produtos_oferta_dia")];
-
-// Pegar objetos do DOM
-
-// Funções
-
-const criarProdutosOfertaDia = (linkImg,textImg,divOferta,textPreco,textDesc) =>{
+const criarProdutosOfertaDia = (linkImg,textImg,divOferta,textPreco,textDesc)=>{
 
     const cardProduto = document.createElement('div');
     cardProduto.classList.add('card');
@@ -50,39 +38,59 @@ const criarProdutosOfertaDia = (linkImg,textImg,divOferta,textPreco,textDesc) =>
     divOferta.appendChild(cardProduto);
 }
 
+const buscarCategoria =()=>{
+    const sel_categoria = document.querySelector("#select_categorias");
+    const opc_categoria = sel_categoria.options[sel_categoria.selectedIndex].value;
+    const produtos_oferta_dia = [...document.querySelectorAll(".produtos_oferta_dia")];
+
+
+    
+
+if(opc_categoria != "Categorias"){
+    linkApiProdutos = `https://dummyjson.com/products/category/${opc_categoria}`;
+
+    
+fetch(linkApiProdutos)
+.then(res => res.json())
+.then(dados =>{
+    const produtosApi = dados.products;
+    let i = 0
+    console.log(produtosApi);
+
+    while(i<3){
+
+    produtos_oferta_dia.map((el)=>{
+
+        let produtoAleatorio = produtosApi[Math.floor(Math.random() * produtosApi.length)];
+    
+        let linkImg = produtoAleatorio.images[Math.floor(Math.random() * produtoAleatorio.images.length)];
+        let textImg = produtoAleatorio.title;
+        let textPreco = produtoAleatorio.price;
+        let textDesc = produtoAleatorio.description;
+    
+    
+        criarProdutosOfertaDia(linkImg,textImg,el,textPreco,textDesc);
+    })
+    i++;
+}
+});
+
+fetch('https://dummyjson.com/products')
+.then(res => res.json())
+.then(console.log);
+}
+
+
+}
+
 // Funções
 
 
 // Eventos
 
-fetch(linkApiProdutos)
-    .then(res => res.json())
-    .then(dados =>{
-        const produtosApi = dados.products;
-        let i = 0
-
-        while(i<3){
-
-        produtos_oferta_dia.map((el)=>{
-
-            let produtoAleatorio = produtosApi[Math.floor(Math.random() * 30)];
-        
-            let linkImg = produtoAleatorio.images[Math.floor(Math.random() * produtoAleatorio.images.length)];
-            let textImg = produtoAleatorio.title;
-            let textPreco = produtoAleatorio.price;
-            let textDesc = produtoAleatorio.description;
-        
-        
-            criarProdutosOfertaDia(linkImg,textImg,el,textPreco,textDesc);
-        })
-        i++;
-    }
-    });
-
-    fetch('https://dummyjson.com/products')
-.then(res => res.json())
-.then(console.log);
-
+setInterval(buscarCategoria,3000);
 
 
 // Eventos
+
+

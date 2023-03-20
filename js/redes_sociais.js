@@ -23,5 +23,3 @@ rede_gmail.addEventListener("click",(evt)=>{
 rede_linkedin.addEventListener("click",(evt)=>{
     window.location.href = "";
 });
-
-
