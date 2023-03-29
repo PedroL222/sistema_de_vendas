@@ -1,4 +1,4 @@
-export default linkApiProdutos;
+
 
 const linkApiProdutos = "https://dummyjson.com/products";
 
@@ -11,7 +11,7 @@ const produtos_oferta_dia = [...document.querySelectorAll(".produtos_oferta_dia"
 
 // Funções
 
-const criarProdutosOfertaDia = (linkImg,textImg,divOferta,textPreco,textDesc) =>{
+export function criarProdutosOfertaDia(linkImg,textImg,divOferta,textPreco,textDesc){
 
     const cardProduto = document.createElement('div');
     cardProduto.classList.add('card');
@@ -49,6 +49,15 @@ const criarProdutosOfertaDia = (linkImg,textImg,divOferta,textPreco,textDesc) =>
 
     divOferta.appendChild(cardProduto);
 }
+
+export function linkCategorias(){
+
+    const sel_categoria = document.querySelector("#select_categorias");
+    const opc_categoria = sel_categoria.options[sel_categoria.selectedIndex].value;
+    
+    
+        window.location.href = "./view/categorias.html";
+    }
 
 // Funções
 

@@ -10,6 +10,10 @@
 a{
     text-decoration: none;
     color: rgba(0, 0, 0, 0.678);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
 }
 
 /* Estilo geral */
@@ -89,7 +93,8 @@ a{
 
 .link_nav:hover,.link_entrada:hover{
     color: white;
-    background-color: #b19915ad;
+    background-color: #ee380ada;
+    box-shadow: 5px 5px 5px 2px #ff3c0098;
 }
 
 select > option:hover{
@@ -282,4 +287,12 @@ footer{
         font-size: 0.7rem !important;
     }
 }
+
+/* Classes Geráis */
+
+.hide{
+    display: none;
+}
+
+/* Classes Geráis */
 
